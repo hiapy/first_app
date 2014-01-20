@@ -7,7 +7,9 @@ gem 'rails', '4.0.0.rc2'
 gem 'bootstrap-sass' 
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group:[:development, :test]
+gem 'pg', group::production
+gem 'rails_12factor', group::production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc2'
