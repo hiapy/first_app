@@ -1,5 +1,21 @@
-<h1>New user</h1>
+<h1>Sign Up</h1>
+<div class="row">
+	<%= form_for @user do |f| %>
+		<%= render "shared/form_errors", record: @user %>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
 
-<%= render 'form' %>
+		<%= f.label :email %><br>
+		<%= f.text_field :email %><br>
 
-<%= link_to 'Back', users_path %>
+		<%= f.label :password %><br>
+		<%= f.password_field :password %><br>
+
+		<%= f.label :password_confirmation %><br>
+		<%= f.password_field :password_confirmation %><br><br>
+	<div>
+		<%= f.submit "Register!", class: "btn btn-primary" %>
+	</div>
+		
+	<% end %>
+</div>
